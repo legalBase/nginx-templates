@@ -32,6 +32,7 @@ server {
 
     fastcgi_param SCRIPT_NAME     index.php;
     fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name;
+    fastcgi_param PHP_VALUE       "upload_max_filesize = 5M \n post_max_size=5M";
 
     fastcgi_intercept_errors on;
     include fastcgi_params;
